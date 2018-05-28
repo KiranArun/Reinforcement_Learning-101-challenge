@@ -53,6 +53,7 @@ apt-get update && apt-get install -y --no-install-recommends \
         xkb-data \
         openbox \
         xterm \
+        xvfb \
     >/dev/null
 
 
