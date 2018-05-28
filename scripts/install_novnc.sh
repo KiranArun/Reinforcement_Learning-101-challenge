@@ -23,7 +23,9 @@ export PATH=${PATH}:/opt/VirtualGL/bin:/opt/TurboVNC/bin
 
 curl -fsSL https://github.com/novnc/noVNC/archive/v${NOVNC_VERSION}.tar.gz | tar -xzf - -C /opt && \
 curl -fsSL https://github.com/novnc/websockify/archive/v${WEBSOCKIFY_VERSION}.tar.gz | tar -xzf - -C /opt && \
+rm -rf /opt/noVNC && \
 mv /opt/noVNC-${NOVNC_VERSION} /opt/noVNC && \
+rm -rf /opt/websockify && \
 mv /opt/websockify-${WEBSOCKIFY_VERSION} /opt/websockify && \
 ln -s /opt/noVNC/vnc_lite.html /opt/noVNC/index.html && \
 cd /opt/websockify && make
