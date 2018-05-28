@@ -27,4 +27,13 @@ mv /opt/websockify-${WEBSOCKIFY_VERSION} /opt/websockify && \
 ln -s /opt/noVNC/vnc_lite.html /opt/noVNC/index.html && \
 cd /opt/websockify && make
 
+
+echo 'no-remote-connections\n\
+no-httpd\n\
+no-x11-tcp-connections\n\
+no-pam-sessions\n\
+permitted-security-types = otp\
+' > /etc/turbovncserver-security.conf
+
+
 cd ${CWD}
