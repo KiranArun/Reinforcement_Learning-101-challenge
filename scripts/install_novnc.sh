@@ -18,7 +18,7 @@ cd /tmp \
    && sed -i 's/$host:/unix:/g' /opt/TurboVNC/bin/vncserver
 cd ${CWD}
 
-PATH=${PATH}:/opt/VirtualGL/bin:/opt/TurboVNC/bin
+export PATH=${PATH}:/opt/VirtualGL/bin:/opt/TurboVNC/bin
 
 
 curl -fsSL https://github.com/novnc/noVNC/archive/v${NOVNC_VERSION}.tar.gz | tar -xzf - -C /opt && \
@@ -29,12 +29,13 @@ ln -s /opt/noVNC/vnc_lite.html /opt/noVNC/index.html && \
 cd /opt/websockify && make
 
 
-echo 'no-remote-connections\n\
-no-httpd\n\
-no-x11-tcp-connections\n\
-no-pam-sessions\n\
-permitted-security-types = otp\
-' > /etc/turbovncserver-security.conf
+cat << EoF >/etc/turbovncserver-security.conf
+no-remote-connections
+no-httpd
+no-x11-tcp-connections
+no-pam-sessions
+permitted-security-types = otp
+EoF
 
 
 cd ${CWD}
