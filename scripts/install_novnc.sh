@@ -40,4 +40,20 @@ permitted-security-types = otp
 EoF
 
 
+apt-get update && apt-get install -y --no-install-recommends \
+        ca-certificates \
+        curl \
+        libc6-dev \
+        libglu1 \
+        libsm6 \
+        libxv1 \
+        x11-xkb-utils \
+        xauth \
+        xfonts-base \
+        xkb-data \
+        openbox \
+        xterm \
+    >/dev/null
+
+
 cd ${CWD}
