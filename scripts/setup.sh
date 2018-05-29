@@ -9,3 +9,10 @@ bash Reinforcement_Learning-101-challenge/scripts/install_ngrok.sh 1>/dev/null
 bash Reinforcement_Learning-101-challenge/scripts/install_novnc.sh 1>/dev/null
 
 mkdir /content/models/
+
+cat <<EoF>/usr/local/bin/run
+#!/bin/bash
+python3 Reinforcement_Learning-101-challenge/display_cartpole.py \$1
+EoF
+
+chmod +x /usr/local/bin/run
