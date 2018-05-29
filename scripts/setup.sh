@@ -7,3 +7,5 @@ chmod +x Reinforcement_Learning-101-challenge/scripts/install_novnc.sh
 
 bash Reinforcement_Learning-101-challenge/scripts/install_ngrok.sh 1>/dev/null
 bash Reinforcement_Learning-101-challenge/scripts/install_novnc.sh 1>/dev/null
+
+mkdir /content/models/
