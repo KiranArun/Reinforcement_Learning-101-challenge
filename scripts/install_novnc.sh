@@ -56,6 +56,7 @@ apt-get update && apt-get install -y --no-install-recommends \
         openbox \
         xterm \
         xvfb \
+        x11vnc \
         xtightvncviewer \
         mesa-utils \
         python-opengl \
