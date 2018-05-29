@@ -43,6 +43,8 @@ cd /opt/websockify && make
 apt-get update && apt-get install -y --no-install-recommends \
         ca-certificates \
         curl \
+        vim.tiny \
+        nano \
         libc6-dev \
         libglu1 \
         libsm6 \

@@ -122,9 +122,7 @@ history = model.fit(env,
 
 # DO NOT EDIT
 
-# test
+# test and visualize the cartpole
+env.render(mode='human')
 hist = model.test(env, nb_episodes=500, visualize=True)
 print('mean:', np.mean(hist.history['episode_reward']))
-
-# start rendering
-env.render(mode='human')
