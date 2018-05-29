@@ -123,12 +123,8 @@ history = model.fit(env,
 # DO NOT EDIT
 
 # test
-hist = model.test(env, nb_episodes=50, visualize=False)
+hist = model.test(env, nb_episodes=500, visualize=True)
 print('mean:', np.mean(hist.history['episode_reward']))
-
-!apt-get install python-opengl 1>/dev/null
-
-!apt-get install mesa-utils
 
 # start rendering
 env.render(mode='human')
